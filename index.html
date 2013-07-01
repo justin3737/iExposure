@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+	<title>Exposure Converter</title>
+	<script type="text/javascript" src="assets/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="assets/iExposure.js"></script>
+	<script type="text/javascript" >
+	$(function(){
+		iExposure.init();
+	});
+	</script>
+</head>
+<body>
+	光圈:<select id="aptureSel"><option value="-1"> -- </option></select>
+	ISO:<select id="isoSel"><option value="-1"> -- </option></select>
+	快門:<select id="shutterSel"><option value="-1"> -- </option></select>
+	<p>
+	換算曝光時間:<input type="text" id="shutterTxt">
+	<p>
+	<button id="start">Start</button>
+	<button id="reset">Reset</button><br>
+	<h2>---------------------------使用說明---------------------------</h2>
+	<li>Step1:</li>
+	設置一組當前的曝光值,包含光圈,快門,ISO<br>
+
+	<li>Step2:</li>
+	按下“開始”<br>
+
+	<li>Step3:</li>
+	調整 “光圈”, “ISO” 獲得新的曝光時間<br>
+
+	<li>Others:</li>
+	重設當前環境曝光值按下“Reset"<br>
+	再從Step 1開始<br>
+	<h2>---------------------------sample---------------------------</h2>
+	<li>拍星軌的場合：</li>
+	用最大光圈最大iso拍攝<br>
+	光圈：f2.8 iso 6400 快門8秒<br>
+	<br>
+	按下start<br>
+	<br>切換iso 為 100 得到曝光時間:8min
+	<br>縮光圈 f8 得到曝光時間:60min
+
+
+</body>
+</html>
